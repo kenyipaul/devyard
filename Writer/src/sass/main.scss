@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+
+.form-wrapper {
+    height: 100vh;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    form {
+        gap: 1rem;
+        width: 100%;
+        padding: 1rem;
+        max-width: 500px;
+        display: grid;
+    
+        .input-area {
+            gap: .5rem;
+            display: grid;
+
+            label, .label {
+                color: #555;
+                font-size: .9em;
+                font-weight: 600;
+            }
+
+            input, label[for="file"] {
+                outline: none;
+                padding: 1rem;
+                font-size: 1em;
+                font-weight: unset;
+                border-radius: .6rem;
+                border: 1px solid #ddd;
+            }
+
+            textarea {
+                @extend .input-area, input;
+                height: 150px;
+                resize: none;
+            }
+
+            input[type="file"] { display: none; }
+        }
+
+        button {
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            background: #000;
+            border-radius: .6rem;
+            padding: 1.1rem 1rem;
+        }
+    }
+}
+
+
+
+
+.writer-container {
+    margin: auto;
+    width: 100%;
+    padding: 1rem;
+    height: 100vh;
+    display: flex;
+    max-width: 900px;
+    justify-content: center;
+    flex-direction: column;
+    gap: .5rem;
+
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        button {
+            gap: .5rem;
+            border: none;
+            display: flex;
+            cursor: pointer;
+            padding: .5rem 1rem;
+            border-radius: .6rem;
+            align-items: center;
+            border: 1px solid #ddd;
+            justify-content: center;
+        }
+    }
+
+    .inputs {
+        gap: .5rem;
+        display: grid;
+        margin-bottom: 1rem;
+    }
+
+    .input-area {
+        gap: .5rem;
+        display: grid;
+
+        label {
+            color: #555;
+        }
+    
+        input, select {
+            padding: 1rem;
+            font-size: 1em;
+            color: #555;
+            outline: none;
+            background: none;
+            border: 1px solid #00000030;
+            border-radius: .6rem;
+
+            option {
+                color: #555;
+            }
+        }
+    }
+    
+    #editor {
+        height: 100%;
+        color: #000;
+        border-radius: .6rem;
+        border: 1px solid #00000030;
+
+        .ql-editor {
+            padding: 1rem 1.5rem;
+
+            p { 
+                font-size: 1.15em;
+                color: #000 !important; 
+            }
+        }
+    }    
+    
+    .ql-toolbar {
+        border: 1px solid #00000030 !important;
+        border-radius: .6rem !important;
+
+        .ql-stroke { stroke: #555; }
+        .ql-fill { fill: #555; }
+        .ql-picker-label { color: #555 !important;}
+        
+    }
+
+
+    .buttons {
+        gap: 1rem;
+        display: grid;
+        grid-template-columns: [col-start] 1fr [col-end] 2fr;
+
+        button {
+            gap: .5rem;
+            color: #555;
+            width: 100%;
+            border: none;
+            display: flex;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 900;
+            align-items: center;
+            border-radius: .6rem;
+            padding: .8rem 1.5rem;
+            border: 1px solid #ddd;
+            justify-content: space-between;
+            
+            
+            &#publishBtn {
+                color: #fff;
+                background: #9900ff;
+                border: 1px solid #7c00cf;
+            }
+        }
+    }
+
+}
